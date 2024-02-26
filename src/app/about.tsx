@@ -61,6 +61,7 @@ export default function About() {
               description="カジュアルに銃火が飛び交う超巨大学園都市で繰り広げられる、「先生」と「生徒」たちの奇跡を巡る物語。 (Pixiv大百科)"
               iamge="https://images.igdb.com/igdb/image/upload/t_cover_big/co2z1g.png"
             />
+            、
             <Tooltip
               title="osu!"
               description="通称peppyが開発した無料プレイのリズムゲーム (ウィキペディア)"
