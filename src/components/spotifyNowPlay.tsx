@@ -25,7 +25,11 @@ export default function SpotifyNowPlay() {
         return;
       }
       const data = await res.json();
-      if (!data.is_playing || data.currently_playing_type !== "album") {
+      if (
+        !data.is_playing ||
+        data.currently_playing_type === "episode" ||
+        data.currently_playing_type === "ad"
+      ) {
         setIsVisible(false);
       } else {
         setIsVisible(true);
