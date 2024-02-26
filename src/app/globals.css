@@ -29,6 +29,37 @@
   }
   width: 300px;
 }
+
+.tooltip-container {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+
+.tooltip {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.description {
+  transition: opacity 0.5s, visibility 0s linear 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  border-radius: 5px;
+  width: 300px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: -125px;
+  z-index: 1000;
+}
+
+.tooltip:hover .description {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
