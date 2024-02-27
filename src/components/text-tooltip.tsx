@@ -41,7 +41,9 @@ export default function Tooltip({
             <p className="text-sm text-slate-600">{description}</p>
           </div>
         </span>
-        <p>{title}</p>
+        <p className="underline decoration-dotted decoration-slate-400">
+          {title}
+        </p>
       </div>
     </div>
   );

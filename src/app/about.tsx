@@ -69,7 +69,7 @@ export default function About() {
             />
             、
             <Tooltip
-              title="Valorant"
+              title="VALORANT"
               description="キャラクターベースの 5v5 タクティカルシューター (公式サイト)"
               iamge="https://images.igdb.com/igdb/image/upload/t_cover_big/co2mvt.png"
             />
