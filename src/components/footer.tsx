@@ -9,6 +9,11 @@ export default function Footer() {
           <Icons.x />
         </div>
       </Link>
+      <Link href="https://instagram.com/tokuzou0829" target="_blank">
+        <div className="bg-white hover:bg-slate-100 rounded p-[10px] mr-[10px]">
+          <Icons.instagram />
+        </div>
+      </Link>
       <Link href="https://github.com/tokuzou0829" target="_blank">
         <div className="bg-white hover:bg-slate-100 rounded p-[10px]">
           <Icons.gitHub />
