@@ -15,8 +15,8 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ja" className="w-full h-full">
-      <body className={" w-full h-full"}>
+    <html lang="ja" suppressHydrationWarning>
+      <body className=" h-screen w-screen">
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

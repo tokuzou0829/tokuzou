@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ArrowDownBody from "@/components/arrowDownBody";
 import About from "./about";
+
 export default function Home() {
   return (
     <main>

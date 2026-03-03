@@ -34,3 +34,37 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Blog System
+
+This project uses file-based Markdown blog posts.
+
+- Posts directory: `content/blog`
+- List page: `/blog`
+- Detail page: `/blog/[slug]`
+
+Each post file must include frontmatter (`coverImage` and `coverAlt` are optional):
+
+```md
+---
+title: "Post title"
+description: "Short summary"
+date: "2026-03-03"
+projectId: "tokuly"
+coverImage: "/korankei.jpg"
+coverAlt: "Cover image description"
+---
+
+Markdown content starts here.
+```
+
+To connect a project to a post, set `postSlug` in `src/lib/projects.ts`.
+
+## Podcast Feed
+
+This blog supports podcast-style listening.
+
+- Audio file directory: `public/podcast`
+- Naming rule: `public/podcast/{slug}.mp3` (example: `public/podcast/tokuly.mp3`)
+- In-post player: shown automatically on `/blog/[slug]` when the matching MP3 exists
+- RSS feed: `/podcast.xml` (includes only posts with matching MP3 files)

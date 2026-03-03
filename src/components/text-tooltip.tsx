@@ -11,7 +11,7 @@ export default function Tooltip({
   iamge: string;
 }) {
   // ツールチップの参照を作成します。
-  const tooltipRef = useRef<any>();
+  const tooltipRef = useRef<any>(undefined);
 
   const handleMouseOver = () => {
     const description = tooltipRef.current.querySelector(".description");

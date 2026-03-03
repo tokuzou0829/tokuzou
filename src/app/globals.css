@@ -60,6 +60,62 @@
   transition-delay: 0s;
 }
 
+.blog-content {
+  line-height: 1.9;
+}
+
+.blog-content h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgb(15 23 42);
+}
+
+.blog-content p {
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.blog-content ul {
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+  list-style: disc;
+  padding-left: 1.4rem;
+}
+
+.blog-content li {
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem;
+}
+
+.blog-content a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.blog-content pre {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  overflow-x: auto;
+  border-radius: 0.5rem;
+  background-color: rgb(15 23 42);
+  padding: 0.9rem;
+  color: rgb(241 245 249);
+}
+
+.blog-content code {
+  border-radius: 0.25rem;
+  background-color: rgb(241 245 249);
+  padding: 0.15rem 0.35rem;
+  font-size: 0.85em;
+}
+
+.blog-content pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

@@ -17,8 +17,8 @@ export default function SpotifyNowPlay() {
   const [isImageHover, setIsImageHover] = useState<boolean>(false);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [previewUrl, setPreviewUrl] = useState<string>("");
-  const spotifyPlayerRef = useRef<any>();
-  const MTimeout = useRef<any>();
+  const spotifyPlayerRef = useRef<any>(undefined);
+  const MTimeout = useRef<any>(undefined);
   const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
