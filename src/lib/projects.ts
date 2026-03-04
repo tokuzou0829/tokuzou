@@ -70,14 +70,15 @@ export const projects: Project[] = [
     period: { kind: "single", year: "2026" },
   },
   {
-    id: "tokuly-live-rtmp-live",
-    title: "Tokuly Live RTMP Server",
+    id: "gen-my-blog-podcast",
+    title: "Gen My Blog Podcast",
     description:
-      "TokulyLiveのRTMP配信サーバーをGoで実装し、今までNginx-rtmp-moduleに頼っていた配信基盤を自前で構築しました。",
-    tags: ["Go", "RTMP"],
+      "ブログ記事から自動でポッドキャストを生成します。音声合成にはAivis Speechを使用し自分の声を使用することができるようになっています。",
+    tags: ["Python", "Gemini", "TTS"],
     postSlug: "",
-    githubUrl: "https://github.com/tokuzou0829/tokuly-rtmp",
-    period: { kind: "single", year: "2025" },
+    githubUrl: "https://github.com/tokuzou0829/gen-my-blog-podcast",
+
+    period: { kind: "ongoing", from: "2025" },
   },
   {
     id: "next-tokuzou-kit",
@@ -91,6 +92,26 @@ export const projects: Project[] = [
     period: { kind: "single", year: "2026" },
   },
   {
+    id: "tokuly-live-rtmp-live",
+    title: "Tokuly Live RTMP Server",
+    description:
+      "TokulyLiveのRTMP配信サーバーをGoで実装し、今までNginx-rtmp-moduleに頼っていた配信基盤を自前で構築しました。",
+    tags: ["Go", "RTMP"],
+    postSlug: "",
+    githubUrl: "https://github.com/tokuzou0829/tokuly-rtmp",
+    period: { kind: "single", year: "2025" },
+  },
+  {
+    id: "easy-live-platform",
+    title: "Easy Live Platform",
+    description:
+      "TokulyLiveで使用していた基盤システムを使用し、Dockerを使用して簡単にライブ配信プラットフォームを構築するためのプロジェクト",
+    tags: ["Nextjs", "Nginx", "Docker"],
+    postSlug: "",
+    githubUrl: "https://github.com/tokuzou0829/easy-live-platform",
+    period: { kind: "single", year: "2024" },
+  },
+  {
     id: "portfolio",
     title: "Portfolio",
     description:
@@ -101,6 +122,28 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/tokuzou0829/tokuzou",
     siteUrl: "https://tokuzou.me",
     period: { kind: "ongoing", from: "2024" },
+  },
+  {
+    id: "ai-character-maker",
+    title: "おしゃべりAIキャラクターメーカー",
+    description:
+      "学校のコンテスト用に作成した、簡単にAIと会話できるアプリケーション。ChatGPT APIを使用して、誰でも簡単におしゃべりAIキャラクターを作成できるサービス",
+    tags: ["Python", "Flask"],
+    postSlug: "",
+    featured: false,
+    githubUrl: "https://github.com/tokuzou0829/character-maker",
+    period: { kind: "single", year: "2023" },
+  },
+  {
+    id: "lyric-get-api",
+    title: "Lyric Get API",
+    description:
+      "Utatenから歌詞を取得するためのAPIをPython + Flaskで実装しVercelにデプロイしています。CLIから歌詞を取得できるスクリプトも作成しました。",
+    tags: ["Python", "Flask"],
+    postSlug: "",
+    githubUrl: "https://github.com/tokuzou0829/lyric-get-api",
+    featured: false,
+    period: { kind: "single", year: "2023" },
   },
   {
     id: "image-server",
