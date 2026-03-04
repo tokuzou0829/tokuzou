@@ -112,6 +112,18 @@ export const projects: Project[] = [
     period: { kind: "single", year: "2024" },
   },
   {
+    id: "slack-spotify-nowplaying",
+    title: "Slack Spotify NowPlaying",
+    description: "SlackのステータスにSpotifyで再生中の曲を表示します。",
+    tags: ["Google Apps Script", "Spotify", "Slack"],
+    image: "/projects/slack-nowplaying.jpeg",
+    postSlug: "",
+    featured: false,
+    githubUrl:
+      "https://gist.github.com/tokuzou0829/f6c3f1cc600dd0dfcaa66be744c01cad",
+    period: { kind: "single", year: "2024" },
+  },
+  {
     id: "portfolio",
     title: "Portfolio",
     description:
