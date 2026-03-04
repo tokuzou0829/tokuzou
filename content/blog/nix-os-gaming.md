@@ -2,8 +2,12 @@
 title: "ゼロから始めるNixOS + Windowsで快適異世界(systemd-boot)ゲーミングライフ"
 description: "NixOSデュアルブートで快適NixOS生活！"
 date: "2025-12-24"
-projectId: "nix-os-gaming"
 ---
+
+:::note
+このブログは、Zennでも公開されています。
+[https://zenn.dev/tokuzou0829/articles/828fe9ebdb1a39](https://zenn.dev/tokuzou0829/articles/828fe9ebdb1a39)
+:::
 
 ## 要約
 

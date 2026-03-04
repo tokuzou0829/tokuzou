@@ -1,11 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Github, Globe } from "lucide-react";
 import type { Project } from "@/lib/projects";
 
 type ProjectListItemProps = {
   project: Project;
   detailHref?: string;
 };
+
+const detailLinkClassName =
+  "font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 hover:decoration-slate-700";
+
+const externalIconLinkClassName =
+  "inline-flex h-7 w-7 items-center justify-center rounded-md border border-slate-200 text-slate-600 transition hover:border-slate-300 hover:text-slate-900";
 
 const formatPeriod = (period?: Project["period"]) => {
   if (!period) {
@@ -28,6 +35,7 @@ export default function ProjectListItem({
   detailHref,
 }: ProjectListItemProps) {
   const periodLabel = formatPeriod(project.period);
+  const hasActionLink = Boolean(detailHref || project.githubUrl || project.siteUrl);
   const layoutClass = project.image
     ? "md:flex-row-reverse md:justify-between"
     : "md:flex-row";
@@ -64,14 +72,37 @@ export default function ProjectListItem({
             ) : null}
           </div>
 
-          {detailHref ? (
-            <div className="mt-3 flex flex-wrap gap-4 text-sm">
-              <Link
-                href={detailHref}
-                className="font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 hover:decoration-slate-700"
-              >
-                詳細ブログを読む
-              </Link>
+          {hasActionLink ? (
+            <div className="mt-3 flex flex-wrap items-center gap-3 text-sm">
+              {project.githubUrl ? (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={externalIconLinkClassName}
+                  aria-label="GitHubを開く"
+                  title="GitHub"
+                >
+                  <Github className="h-4 w-4" aria-hidden="true" />
+                </a>
+              ) : null}
+              {project.siteUrl ? (
+                <a
+                  href={project.siteUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={externalIconLinkClassName}
+                  aria-label="サイトを開く"
+                  title="サイト"
+                >
+                  <Globe className="h-4 w-4" aria-hidden="true" />
+                </a>
+              ) : null}
+              {detailHref ? (
+                <Link href={detailHref} className={detailLinkClassName}>
+                  詳細ブログを読む
+                </Link>
+              ) : null}
             </div>
           ) : null}
         </div>

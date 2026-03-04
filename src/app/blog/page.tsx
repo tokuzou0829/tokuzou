@@ -16,9 +16,7 @@ export default async function BlogPage() {
         <div className="mb-8 flex items-end justify-between gap-3">
           <div>
             <h1 className="mb-2 text-4xl font-bold">Blog</h1>
-            <p className="text-gray-600">
-              プロジェクトの背景、設計、実装のポイントを記録しています。
-            </p>
+            <p className="text-gray-600">雑に書きたいことを書いてます〜</p>
           </div>
           <div className="flex items-center gap-4">
             <Link

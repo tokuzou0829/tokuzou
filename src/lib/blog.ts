@@ -1,13 +1,62 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
+import rehypeShiki from "@shikijs/rehype";
 import matter from "gray-matter";
 import { remark } from "remark";
+import directive from "remark-directive";
 import gfm from "remark-gfm";
-import html from "remark-html";
+import remarkRehype from "remark-rehype";
+import rehypeStringify from "rehype-stringify";
+import { visit } from "unist-util-visit";
 
 const blogDirectory = path.join(process.cwd(), "content", "blog");
 const podcastDirectory = path.join(process.cwd(), "public", "podcast");
 const podcastMimeType = "audio/mpeg";
+const shikiThemes = {
+  light: "light-plus",
+  dark: "dark-plus",
+};
+
+type DirectiveData = {
+  hName?: string;
+  hProperties?: Record<string, unknown>;
+};
+
+type ContainerDirectiveNode = {
+  type: string;
+  name?: string;
+  data?: DirectiveData;
+};
+
+type MarkdownTree = {
+  type: string;
+  children?: unknown[];
+};
+
+const remarkNoteDirective = () => {
+  return (tree: unknown) => {
+    visit(tree as MarkdownTree, (node: unknown) => {
+      const directiveNode = node as ContainerDirectiveNode;
+
+      if (
+        directiveNode.type !== "containerDirective" ||
+        directiveNode.name !== "note"
+      ) {
+        return;
+      }
+
+      directiveNode.data = {
+        ...(directiveNode.data ?? {}),
+        hName: "aside",
+        hProperties: {
+          ...(directiveNode.data?.hProperties ?? {}),
+          className: ["blog-note"],
+          role: "note",
+        },
+      };
+    });
+  };
+};
 
 type Frontmatter = {
   title?: string;
@@ -142,7 +191,14 @@ export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> 
   }
 
   const [processedContent, audio] = await Promise.all([
-    remark().use(gfm).use(html).process(content),
+    remark()
+      .use(gfm)
+      .use(directive)
+      .use(remarkNoteDirective)
+      .use(remarkRehype)
+      .use(rehypeShiki, { themes: shikiThemes })
+      .use(rehypeStringify)
+      .process(content),
     getPodcastAudioBySlug(slug),
   ]);
 

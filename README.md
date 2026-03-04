@@ -58,6 +58,17 @@ coverAlt: "Cover image description"
 Markdown content starts here.
 ```
 
+Blog markdown supports:
+
+- Code block syntax highlight via Shiki (add language names to fenced code blocks)
+- Note callouts using directive syntax:
+
+```md
+:::note
+ここに注釈を書きます。
+:::
+```
+
 To connect a project to a post, set `postSlug` in `src/lib/projects.ts`.
 
 ## Podcast Feed

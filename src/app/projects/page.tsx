@@ -20,7 +20,7 @@ export default async function ProjectsPage() {
           <div>
             <h1 className="mb-2 text-4xl font-bold">Projects</h1>
             <p className="text-gray-600">
-              取り組んでいるプロジェクトを画像付き・テキストのみで一覧表示しています。
+              私はこれまでこのようなプロジェクトを行なってきました。
             </p>
           </div>
           <Link

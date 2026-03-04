@@ -20,6 +20,8 @@ export type Project = {
   tags: string[];
   image?: string;
   postSlug: string;
+  githubUrl?: string;
+  siteUrl?: string;
   featured?: boolean;
   period?: ProjectPeriod;
 };
@@ -47,10 +49,12 @@ export const projects: Project[] = [
     id: "mootio",
     title: "Mootio",
     description:
-      "降ってつながる。友達と運動する。 学校内で開催されたハッカソンで作成しました。 https://mootio.app",
+      "降ってつながる。友達と運動する。学校内で開催されたハッカソンで作成しました。",
     tags: ["Nextjs", "Hono", "PWA"],
     image: "/projects/mootio.jpeg",
     postSlug: "",
+    siteUrl: "https://mootio.app",
+    githubUrl: "https://github.com/tokuzou0829/mootio",
     featured: true,
     period: { kind: "single", year: "2026" },
   },
@@ -61,6 +65,8 @@ export const projects: Project[] = [
     tags: ["Nextjs", "Hono", "PWA"],
     image: "/projects/numatter.jpeg",
     postSlug: "",
+    siteUrl: "https://numatter.vercel.app",
+    githubUrl: "https://github.com/tokuzou0829/twitter-clone",
     period: { kind: "single", year: "2026" },
   },
   {
@@ -70,7 +76,19 @@ export const projects: Project[] = [
       "TokulyLiveのRTMP配信サーバーをGoで実装し、今までNginx-rtmp-moduleに頼っていた配信基盤を自前で構築しました。",
     tags: ["Go", "RTMP"],
     postSlug: "",
+    githubUrl: "https://github.com/tokuzou0829/tokuly-rtmp",
     period: { kind: "single", year: "2025" },
+  },
+  {
+    id: "next-tokuzou-kit",
+    title: "Next Tokuzou Kit",
+    description:
+      "自分用のNextjs + Honoによるフルスタックアプリケーション開発キット。これをベースにすることでアイデアを形にする速度を爆速にします。",
+    tags: ["Next.js", "Hono", "TypeScript"],
+    postSlug: "",
+    githubUrl: "https://github.com/tokuzou0829/next-tokuzou-kit",
+
+    period: { kind: "single", year: "2026" },
   },
   {
     id: "portfolio",
@@ -80,7 +98,19 @@ export const projects: Project[] = [
     tags: ["Next.js", "Tailwind CSS", "Personal Site"],
     postSlug: "",
     featured: false,
+    githubUrl: "https://github.com/tokuzou0829/tokuzou",
+    siteUrl: "https://tokuzou.me",
     period: { kind: "ongoing", from: "2024" },
+  },
+  {
+    id: "image-server",
+    title: "TokuzouServerIMG",
+    description: "画像を簡単にリンク化して共有するためのサービス",
+    tags: ["Javascript", "OCR"],
+    postSlug: "",
+    featured: false,
+    siteUrl: "https://img.tokuzou.moe",
+    period: { kind: "ongoing", from: "2021" },
   },
 ];
 
