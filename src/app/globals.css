@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes profile-kurutto {
+  from {
+    transform: rotateY(0deg) scale(1);
+  }
+  50% {
+    transform: rotateY(180deg) scale(1.08);
+  }
+  to {
+    transform: rotateY(360deg) scale(1);
+  }
+}
+
+.profile-kurutto {
+  animation: profile-kurutto 0.7s ease-in-out;
+}
+
 .fadeInOut {
   transition: opacity 0.2s; /* 0.5秒で透明度が変化する */
 }
