@@ -14,4 +14,11 @@ export const mutualLinks: MutualLink[] = [
     url: "https://nakasyou.how/",
     image: "/mutual_links/nakasyou.png",
   },
+  {
+    name: "minagishl.com",
+    author: "Minagishl",
+    addedAt: "2026-05-27",
+    url: "https://minagishl.com/",
+    image: "/mutual_links/minagishl.webp",
+  }
 ];
