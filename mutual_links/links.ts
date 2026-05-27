@@ -20,5 +20,12 @@ export const mutualLinks: MutualLink[] = [
     addedAt: "2026-05-27",
     url: "https://minagishl.com/",
     image: "/mutual_links/minagishl.webp",
+  },
+  {
+    name: "aomona.me",
+    author: "aomona",
+    addedAt: "2026-05-28",
+    url: "https://aomona.me/",
+    image: "/mutual_links/aomona.png",
   }
 ];
