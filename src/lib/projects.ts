@@ -49,7 +49,7 @@ export const projects: Project[] = [
     id: "mootio",
     title: "Mootio",
     description:
-      "降ってつながる。友達と運動する。学校内で開催されたハッカソンで作成しました。",
+      "振ってつながる。友達と運動する。学校内で開催されたハッカソンで作成しました。",
     tags: ["Nextjs", "Hono", "PWA"],
     image: "/projects/mootio.jpeg",
     postSlug: "",
