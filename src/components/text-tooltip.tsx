@@ -4,11 +4,11 @@ import React, { useEffect, useRef } from "react";
 export default function Tooltip({
   title,
   description,
-  iamge,
+  image,
 }: {
   title: string;
   description: string;
-  iamge: string;
+  image: string;
 }) {
   // ツールチップの参照を作成します。
   const tooltipRef = useRef<any>(undefined);
@@ -35,7 +35,7 @@ export default function Tooltip({
     >
       <div className="tooltip">
         <span className="description bg-white shadow-lg flex overflow-hidden">
-          <img src={iamge} className="w-[80px] h-[120px] object-cover "></img>
+          <img src={image} className="w-[80px] h-[120px] object-cover "></img>
           <div className="ml-[10px] mr-[10px] flex flex-col text-left">
             <p className="font-bold">{title}</p>
             <p className="text-sm text-slate-600">{description}</p>

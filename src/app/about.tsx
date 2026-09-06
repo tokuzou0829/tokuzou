@@ -21,7 +21,7 @@ export default async function About() {
           <span>趣味のアプリ開発をフルスタックで行なっています。</span>
           <br />
           <span>
-            最近はWebデザイン、セキュリティ、AI分野についてのを勉強をしています。
+            最近はWebデザイン、セキュリティ、AI分野についての勉強をしています。
           </span>
         </div>
         <Image
@@ -104,13 +104,13 @@ export default async function About() {
             <Tooltip
               title="五等分の花嫁"
               description="５つ子が可愛すぎる！僕は三玖推しです！全人類が観るべき！"
-              iamge="https://www.tbs.co.jp/anime/5hanayome/img/topvisual_02@2x.jpg"
+              image="https://www.tbs.co.jp/anime/5hanayome/img/topvisual_02@2x.jpg"
             />
             、
             <Tooltip
               title="僕の心のヤバいやつ"
               description="山田が可愛すぎるし、憧れる！！！絶対観て！"
-              iamge="https://bokuyaba-anime.com/assets/img/top/kv03.jpg"
+              image="https://bokuyaba-anime.com/assets/img/top/kv03.jpg"
             />
             、
             <Tooltip
@@ -118,7 +118,7 @@ export default async function About() {
               description="
             めっちゃ面白かった！一回見るべき。
             「死んでも生きろ」「貫け、鋼の心を」"
-              iamge="https://kabaneri.com/assets/img/common/kv.jpg"
+              image="https://kabaneri.com/assets/img/common/kv.jpg"
             />
             が大好きです。
           </span>
@@ -127,19 +127,19 @@ export default async function About() {
             <Tooltip
               title="ブルーアーカイブ"
               description="カジュアルに銃火が飛び交う超巨大学園都市で繰り広げられる、「先生」と「生徒」たちの奇跡を巡る物語。 (Pixiv大百科)"
-              iamge="https://images.igdb.com/igdb/image/upload/t_cover_big/co2z1g.png"
+              image="https://images.igdb.com/igdb/image/upload/t_cover_big/co2z1g.png"
             />
             、
             <Tooltip
               title="osu!"
               description="通称peppyが開発した無料プレイのリズムゲーム (ウィキペディア)"
-              iamge="https://images.igdb.com/igdb/image/upload/t_cover_big/co7p0w.png"
+              image="https://images.igdb.com/igdb/image/upload/t_cover_big/co7p0w.png"
             />
             、
             <Tooltip
               title="VALORANT"
               description="キャラクターベースの 5v5 タクティカルシューター (公式サイト)"
-              iamge="https://images.igdb.com/igdb/image/upload/t_cover_big/co2mvt.png"
+              image="https://images.igdb.com/igdb/image/upload/t_cover_big/co2mvt.png"
             />
             などのゲームをプレイしています
           </span>
